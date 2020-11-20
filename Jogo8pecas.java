@@ -1,6 +1,4 @@
-
 package jogo8pecas;
-
 /**
  *
  * @author Patricia
@@ -8,19 +6,16 @@ package jogo8pecas;
 public class Jogo8pecas {
 
     public static void main(String[] args) {
-    int estadoInicial [][]={{0,2,3},
-                            {1,4,6},
-                            {7,5,8}};
+     
+    int estadoInicial [][]={{1,2,3},{4,5,0},{7,8,6}};    
+    //int estadoInicial [][]={{0,2,3},{1,4,6},{7,5,8}};
+   
     Estado e = new Estado(estadoInicial);
     No no = new No(e, -1, 0);
     
-    /*
-    BuscaProfundidadeLimitada b = new BuscaProfundidadeLimitada();
-    b.busca(no);
-    */
+ //   BuscaLargura l = new BuscaLargura(); l.busca(no); 
+    BuscaProfundidadeLimitada b = new BuscaProfundidadeLimitada(); b.busca(no);    
     
-    BuscaLargura l = new BuscaLargura();
-    l.busca(no);
     
     }
 }
