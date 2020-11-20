@@ -1,4 +1,3 @@
-
 package jogo8pecas;
 
 
@@ -116,6 +115,6 @@ public class Estado {
         System.out.println();
     }
     System.out.println("Linha vazia " + this.getLinhaVazia());
-    System.out.println("Linha vazia " + this.getColunaVazia());
+    System.out.println("Conluna vazia " + this.getColunaVazia());
     }   
 }
