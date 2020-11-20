@@ -8,7 +8,7 @@ public class BuscaLargura {
 
     private ArrayList<No> List = new ArrayList();
     private Queue<No> fronteira = new PriorityQueue<>();
-    private int limite = 0;
+    private int limite = 100;
 
 public BuscaLargura(){}
 
@@ -38,8 +38,7 @@ public void busca(No noInicial){
                 //Inserir sucessor na fronteira
                 fronteira.addAll(sucessores);
             }                     
-        }
-        
+        }       
         } 
         
     public void imprimeCaminho(No noObjetivo){
