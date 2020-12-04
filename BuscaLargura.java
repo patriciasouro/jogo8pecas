@@ -8,7 +8,6 @@ public class BuscaLargura {
 
     private ArrayList<No> List = new ArrayList();
     private Queue<No> fronteira = new PriorityQueue<>();
-    private int limite = 100;
 
 public BuscaLargura(){}
 
@@ -31,13 +30,11 @@ public void busca(No noInicial){
                 return;
         }
 
-        if(no.getProfundidade()<limite){
-
-                //gerar sucessor do no
-                sucessores = no.GerarSucessor(pai);
-                //Inserir sucessor na fronteira
-                fronteira.addAll(sucessores);
-            }                     
+        //gerar sucessor do no
+        sucessores = no.GerarSucessor(pai);
+        //Inserir sucessor na fronteira
+        fronteira.addAll(sucessores);
+                   
         }       
         } 
         
