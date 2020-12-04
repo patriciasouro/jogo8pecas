@@ -13,9 +13,11 @@ public class Jogo8pecas {
     Estado e = new Estado(estadoInicial);
     No no = new No(e, -1, 0);
     
- //   BuscaLargura l = new BuscaLargura(); l.busca(no); 
-    BuscaProfundidadeLimitada b = new BuscaProfundidadeLimitada(); b.busca(no);    
-    
+  BuscaAestrela a = new BuscaAestrela(); a.BuscaAestrela(no);
+  //  BuscaGulosa g = new BuscaGulosa(); g.BuscaGulosa(no);
+  //  BuscaLargura l = new BuscaLargura(); l.busca(no); 
+   // BuscaProfundidadeLimitada b = new BuscaProfundidadeLimitada(); b.busca(no);    
+      
     
     }
 }
