@@ -13,7 +13,7 @@ public class BuscaAestrela{
        Lista = new ArrayList();
        Indice = 10;
    }
-   //usar funcao de avaliacao antes de testar se é objetivo
+
 public void BuscaAestrela(No noInicial){
     //Inserir no inicial na frontreira
     Fronteira.add(noInicial);
@@ -25,24 +25,18 @@ public void BuscaAestrela(No noInicial){
             no = Fronteira.poll();
             Lista.add(no); 
            int pai = Lista.size()-1;
-            
- 
-
             //testar se no e objetivo
             if(no.getEstado().EhObjetivo()){
                 imprimeCaminho(no);
                 return;
             }
 
-            if(no.getProfundidade() < Indice){
-
+            if(no.getfuncaoAvaliacao() < Indice){
             //gerar sucessor do no
             sucessores = no.GerarSucessor(pai);
             //Inserir sucessor na fronteira
             Fronteira.addAll(sucessores);
             }
-
-
 }
     public void imprimeCaminho(No noObjetivo){
         No aux = new No();
